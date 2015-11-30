@@ -26,7 +26,7 @@ https://godoc.org/gopkg.in/mgo.v2
 
 把这段代码copy并允许学习一下
 
-注意把数据库地址改成本地：
+注意把数据库地址改成本地：127.0.0.1:27017
 ```go
 package main
 
@@ -43,7 +43,7 @@ type Person struct {
 }
 
 func main() {
-        session, err := mgo.Dial("127.0.0.1：")
+        session, err := mgo.Dial("127.0.0.1:27017")
         if err != nil {
                 panic(err)
         }
