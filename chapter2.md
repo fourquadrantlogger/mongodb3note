@@ -82,3 +82,29 @@ E:/github.com/timeloveboy/mgo-demo/mgo-demo.exe  [E:/github.com/timeloveboy/mgo-
 Phone: +55 53 8116 9639
 成功: 进程退出代码 0.
 ```
+注意
+session.SetMode(mgo.Monotonic, true)这句话
+
+看起来还不错，然后回顾一下mongo shell命令
+http://blog.csdn.net/xyz_lmn/article/details/8072621
+
+```
+> show dbs
+local  0.078GB
+test   0.078GB
+
+> use test
+switched to db test
+> show collections
+people
+system.indexes
+
+> db.people.count()
+4
+
+> db.people.find()
+{ "_id" : ObjectId("565bbd1bd3819ca7dd2d3d3d"), "name" : "Ale", "phone" : "+55 53 8116 9639" }
+{ "_id" : ObjectId("565bbd1bd3819ca7dd2d3d3e"), "name" : "Cla", "phone" : "+55 53 8402 8510" }
+{ "_id" : ObjectId("565bc06a892e6ea0ef7c8d2e"), "name" : "Ale", "phone" : "+55 53 8116 9639" }
+{ "_id" : ObjectId("565bc06a892e6ea0ef7c8d2f"), "name" : "Cla", "phone" : "+55 53 8402 8510" }
+```
