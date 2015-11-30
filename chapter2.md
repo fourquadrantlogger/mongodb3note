@@ -69,3 +69,16 @@ func main() {
 }
 ```
 
+记得启动一下mongod
+
+```
+E:\Program Files\MongoDB\Server\3.0\bin>mongod.exe -dbpath e:\mongodb.org\DB
+```
+然后build run
+```
+E:/Program Files/go/bin/go.exe build -i [E:/github.com/timeloveboy/mgo-demo]
+成功: 进程退出代码 0.
+E:/github.com/timeloveboy/mgo-demo/mgo-demo.exe  [E:/github.com/timeloveboy/mgo-demo]
+Phone: +55 53 8116 9639
+成功: 进程退出代码 0.
+```
