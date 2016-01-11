@@ -10,7 +10,9 @@ https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
 
 设置一个数据库路径
 
-你的安装文件夹...\mongod.exe --dbpath E:\mongodb.org\DB
+你的安装文件夹...\mongod.exe --dbpath "E:\mongodb.org\DB"
+
+注意，这里路径要加双引号
 
 我安装到了E:\mongodb.org\DB
 
