@@ -1,0 +1,6 @@
+
+``` shell
+mongo -nodb
+conn = new Mongo("host.name:30000")
+
+nodb模式
