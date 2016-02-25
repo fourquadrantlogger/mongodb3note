@@ -1,0 +1,5 @@
+##　启动命令
+``` shell
+ mongod --dbpath='/var/local/mongodbdata' 
+
+```
