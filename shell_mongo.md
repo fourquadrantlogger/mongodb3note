@@ -1,11 +1,12 @@
-```
 命令行
+```
 --help	显示命令行参数
 --nodb	不连接数据库方式启动，稍后可以使用 new Mongo() 或 connect() 来建立连接
 --shell	从命令行运行完一个 .js 文件后，停留在shell中，而不是结束
+```
 特殊命令
 非JavaScript的辅助指令：
-
+```
 help	显示帮助
 db.help()	显示 db 方法帮助
 db.myColl .help()	显示聚集的方法帮助
@@ -14,7 +15,9 @@ use dbname	设置db变量来指明使用服务器上的 dbname 数据库
 show collections	打印当前数据库的所有聚集
 show users	打印当前数据库的用户
 show profile	打印最近耗时大于1ms的profiling操作
+```
 基本的Shell Javascript操作
+```
 db	指向当前数据库对象和连接的变量，已经在你的实例里定义好。
 db.auth(user,pass)	数据库认证（如果运行安全模式的话）
 coll = db.collection	访问数据库里特定的 collection
@@ -41,12 +44,15 @@ coll.find( ... ).skip(n)	跳过 n 行结果。
 coll.count()	返回聚集里对象的总数。
 coll.find( ... ).count()	返回匹配该查询的对象总数。注意，该返回会忽略 limit 和 skip。比如有100行记录匹配该查询，但是limit为10，count() 仍会返回100。这比你自己循环更快，但仍然需要消耗些时间。
 更多信息请参考 [查询] 。
-
+```
 错误检查
+```
 [{{db.getLastError()}}]	返回上次操作的错误
 db.getPrevError()	返回之前操作的错误
 db.resetError()	清除错误记录
+```
 管理命令
+```
 db.cloneDatabase(fromhost)	从另外指定的主机拷贝当前数据数据库。fromhost必须为noauth模式。
 db.copyDatabase(fromdb, todb, fromhost)	拷贝fromhost的fromdb数据库到当前服务器的todb数据库。fromhost必须为noauth模式。
 db.repairDatabase()	修复当前数据库。如果数据库很大则该操作会非常慢。
